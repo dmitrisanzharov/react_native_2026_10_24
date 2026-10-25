@@ -12,7 +12,7 @@ export default function Index() {
             <Link href='/foo/foo_file'>foo</Link>
             <Link href='/blah'>blah</Link>
             <Link href='/bar'>bar</Link>
-            <Link href='/tabs-example'>tabs</Link>
+            <Link href='/omg'>tabs</Link>
         </View>
     );
 }
