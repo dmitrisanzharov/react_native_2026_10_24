@@ -10,7 +10,7 @@ const Index = (props: Props) => {
 
     return (
         <View>
-            <Text>TabsIndex</Text>
+            <Text>OMG tab</Text>
         </View>
     );
 };
