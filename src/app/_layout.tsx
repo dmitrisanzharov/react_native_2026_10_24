@@ -6,7 +6,7 @@ export default function RootLayout() {
     return (
         <Stack
             screenOptions={{
-                // headerShown: false,
+                headerShown: false,
                 headerStyle: {
                     backgroundColor: 'red'
                 },
@@ -16,9 +16,9 @@ export default function RootLayout() {
                 }
             }}
         >
-            <Stack.Screen name='about' options={{ title: 'omg its about ' }} />
-            <Stack.Screen name='bar' options={{ title: 'bar man hits oh yeah!', headerShown: true }} />
-            {/* <Stack.Screen name='tabs-example' /> */}
+            {/* <Stack.Screen name='(tabs)' /> */}
+            {/* <Stack.Screen name='about' options={{ title: 'omg its about ' }} />
+            <Stack.Screen name='bar' options={{ title: 'bar man hits oh yeah!', headerShown: true }} /> */}
         </Stack>
     );
 }
