@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 type Props = {};
 
 const Index = (props: Props) => {
+    console.log('tabs index');
     // function handleRedirect() {
     //     router.push('/about');
     // }
