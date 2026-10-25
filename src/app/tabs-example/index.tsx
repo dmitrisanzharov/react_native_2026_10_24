@@ -2,7 +2,7 @@ import { Text, View } from 'react-native';
 
 type Props = {};
 
-const Index = (props: Props) => {
+const Lala = (props: Props) => {
     console.log('tabs index');
     // function handleRedirect() {
     //     router.push('/about');
@@ -16,4 +16,4 @@ const Index = (props: Props) => {
     );
 };
 
-export default Index;
+export default Lala;
