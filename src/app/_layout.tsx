@@ -18,7 +18,6 @@ export default function RootLayout() {
         >
             <Stack.Screen name='about' options={{ title: 'omg its about ' }} />
             <Stack.Screen name='bar' options={{ title: 'bar man hits oh yeah!', headerShown: true }} />
-            <Stack.Screen name='tabs-example' options={{ headerShown: false }} />
         </Stack>
     );
 }

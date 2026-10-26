@@ -1,8 +1,13 @@
+import * as Clipboard from 'expo-clipboard';
+import * as Haptics from 'expo-haptics';
 import { Link, useFocusEffect } from 'expo-router';
 import React from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, Share, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function Index() {
+    console.log('Haptics', Haptics);
+    console.log('clip', Clipboard);
+
     const [input, setInput] = React.useState('');
 
     React.useEffect(() => {
@@ -19,6 +24,16 @@ export default function Index() {
         }, [])
     );
 
+    async function handleVibrate() {
+        console.log('vibrate pressed');
+
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+
+        Share.share({ message: 'share the app' });
+
+        Clipboard.setStringAsync('something got clip boarded');
+    }
+
     return (
         <View style={styles.container}>
             <Text>Hello</Text>
@@ -31,6 +46,15 @@ export default function Index() {
             <View style={{ border: '2px solid blue' } as any}>
                 <TextInput value={input} onChangeText={setInput} />
             </View>
+            <View
+                style={{
+                    height: 1,
+                    backgroundColor: '#ccc',
+                    width: '100%',
+                    marginBottom: 5
+                }}
+            />
+            <Button title='vibrate' onPress={handleVibrate} />
         </View>
     );
 }
